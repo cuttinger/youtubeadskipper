@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Youtube Ads Auto Skiper",
+  "description": "Automatically skip ads on youtube video",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "avatar.png"
+  },
+
+  "permissions": [
+    "https://www.youtube.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [ "https://www.youtube.com/*"],
+      "js": [ "jquery.min.js", "workflow.js" ],
+      "run_at": "document_end"
+    }
+  ]
+}
